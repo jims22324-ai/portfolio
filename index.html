@@ -9,15 +9,21 @@
 </head>
 <body class="project-detail-page">
 
-    <nav>
+   <nav>
     <div class="logo">JIMMY TRUONG</div>
+    
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
     <ul class="nav-links">
         <li><a href="#propos">À Propos</a></li>
         <li class="has-megamenu">
             <a href="#projets" class="menu-trigger">Mes Projets</a>
             <div class="megamenu">
                 <div class="megamenu-content">
-                    
                     <div class="mega-list">
                         <a href="projet-lvmh.html" class="mega-link" data-img="projet1.png">LVMH <span class="num">01</span></a>
                         <a href="projet-starbucks.html" class="mega-link" data-img="projet2.png">Starbucks <span class="num">02</span></a>
@@ -34,7 +40,6 @@
                             <img src="projet1.png" id="mega-preview-img" alt="Preview">
                         </div>
                     </div>
-
                 </div>
             </div>
         </li>
@@ -276,6 +281,47 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     </script>
+
+    <script>
+        // 1. GESTION DU MENU BURGER (MOBILE)
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        // Fermer le menu mobile quand on clique sur un lien
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // 2. GESTION DE LA PREVIEW IMAGE (DESKTOP)
+        const megaLinks = document.querySelectorAll(".mega-link");
+        const previewImg = document.getElementById("mega-preview-img");
+
+        megaLinks.forEach(link => {
+            link.addEventListener("mouseenter", function() {
+                const newImg = this.getAttribute("data-img");
+                if (newImg && previewImg) {
+                    previewImg.style.opacity = "0";
+                    setTimeout(() => {
+                        previewImg.src = newImg;
+                        previewImg.style.opacity = "1";
+                    }, 150);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
 </body>
 </html>
         <footer>
