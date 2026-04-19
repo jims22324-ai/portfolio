@@ -3,124 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio 2026 | Jimmy Truong</title>
+    <title>LVMH x Forward | Jimmy Truong</title>
     
     <link rel="icon" type="image/png" href="favicon.png">
-
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Inter:wght@200;400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="project-detail-page">
 
-    <a href="index.html#projets" class="close-project">
+     <a href="index.html#projets" class="close-project">
         <span class="close-icon">✕</span>
         <span class="close-text">Fermer</span>
     </a>
 
-    <nav>
+    <nav class="project-nav">
         <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">JIMMY TRUONG</a></div>
     </nav>
 
     <main>
-    <header class="project-header-minimalist">
-        <div class="header-content">
-            <span class="subtitle">Stage de 3 mois • 2024</span>
-            <h1>LVMH x Forward</h1>
-            <p class="project-intro">Conception d'une interface immersive sous l'égide du groupe LVMH. Fidélité absolue aux codes du luxe et restructuration de l'expérience utilisateur.</p>
-        </div>
-    </header>
+        <header class="project-header-minimalist">
+            <div class="header-content">
+                <span class="subtitle">Stage de 3 mois • 2024</span>
+                <h1>LVMH x Forward</h1>
+                <p class="project-intro">Conception d'une interface immersive sous l'égide du groupe LVMH. Fidélité absolue aux codes du luxe et restructuration de l'expérience utilisateur.</p>
+            </div>
+        </header>
 
-    <section class="main-mockup-section">
-        <div class="mockup-container">
-            <img src="lvmh-1.png" alt="Maquette Desktop LVMH Forward" class="desktop-mockup">
-        </div>
-    </section>
+        <section class="main-mockup-section">
+            <div class="mockup-container">
+                <img src="lvmh-1.png" alt="Desktop LVMH" class="desktop-mockup">
+            </div>
+        </section>
 
-    <section class="typology-grid">
-        <div class="grid-item">
-            <img src="lvmh-2.png" alt="Détail 1">
-            
-        </div>
-        <div class="grid-item">
-            <img src="lvmh-3.png" alt="Détail 2">
-            
-        </div>
-        <div class="grid-item">
-            <img src="lvmh-4.png" alt="Détail 3">
-            
-        </div>
-        <div class="grid-item">
-            <img src="lvmh-5.png" alt="Détail 4">
-            
-        </div>
-    </section>
+        <section class="project-slideshow">
+            <div class="swiper project-swiper" id="lvmh-gallery">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="lvmh-2.png" data-pswp-width="1920" data-pswp-height="1080">
+                            <img src="lvmh-2.png" alt="Détail 1">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="lvmh-3.png" data-pswp-width="1920" data-pswp-height="1080">
+                            <img src="lvmh-3.png" alt="Détail 2">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="lvmh-4.png" data-pswp-width="1920" data-pswp-height="1080">
+                            <img src="lvmh-4.png" alt="Détail 3">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="lvmh-5.png" data-pswp-width="1920" data-pswp-height="1080">
+                            <img src="lvmh-5.png" alt="Détail 4">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
 
-    <section class="project-footer">
-        <div class="footer-info">
-            <h3>Rôle</h3>
-            <p>UX/UI Designer</p>
-        </div>
-        <div class="footer-info">
-            <h3>Date</h3>
-            <p>2024</p>
-        </div>
-        <div class="footer-info">
-            <h3>Outils</h3>
-            <p>Figma, Adobe Suite</p>
-        </div>
-    </section>
-</main>
+        <section class="project-footer">
+            <div class="footer-info">
+                <h3>Rôle</h3>
+                <p>UX/UI Designer</p>
+            </div>
+            <div class="footer-info">
+                <h3>Date</h3>
+                <p>2024</p>
+            </div>
+            <div class="footer-info">
+                <h3>Outil utilisé</h3>
+                <p>Figma</p>
+            </div>
+        </section>
+    </main>
 
     <footer>
-    <div class="footer-main">
-        <div class="footer-left">
-            <span class="subtitle" style="color: var(--gray);">Disponible pour septembre 2026</span>
-            <h2>Me contacter</h2>
-            <p class="footer-desc">
-                Mon rythme est de 4 jours en entreprise et 1 jour à l’école.
-            </p>
-        </div>
+        </footer>
 
-        <div class="footer-right">
-            <div class="contact-cards">
-                <a href="jimmy-truong-CV.pdf" download="CV_Jimmy_Truong.pdf" target="_blank" class="contact-card cv-card">
-                    <div class="card-frame"><img src="cv-icon.png" alt="CV"></div>
-                    <div class="card-info">
-                        <h4>Mon CV</h4>
-                        <span>Télécharger (PDF)</span>
-                    </div>
-                </a>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.js';
 
-                <a href="tel:+33752075204" class="contact-card phone-card">
-                    <div class="card-frame"><img src="phone-icon.png" alt="Tél"></div>
-                    <div class="card-info">
-                        <h4>07 52 07 52 04</h4>
-                        <span>Appel / SMS</span>
-                    </div>
-                </a>
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#lvmh-gallery',
+            children: 'a',
+            pswpModule: () => import('https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.esm.js'),
+            // Empêche l'image de s'étirer bizarrement
+            imageClickAction: 'zoom',
+            tapAction: 'toggle-controls',
+            initialZoomLevel: 'fit',
+            secondaryZoomLevel: 1.5,
+            maxZoomLevel: 2
+        });
 
-                <a href="mailto:jims22324@gmail.com" class="contact-card email-card">
-                    <div class="card-frame"><img src="email-icon.png" alt="Email"></div>
-                    <div class="card-info">
-                        <h4>Email</h4>
-                        <span>jims22324@gmail.com</span>
-                    </div>
-                </a>
+        // --- SCRIPT ANTI-DEFORMATION ---
+        // Ce filtre détecte la taille réelle de l'image dès qu'elle commence à charger
+        lightbox.addFilter('itemData', (itemData) => {
+            const img = new Image();
+            img.src = itemData.src;
+            img.onload = () => {
+                itemData.width = img.width;
+                itemData.height = img.height;
+            };
+            return itemData;
+        });
 
-                <a href="https://www.linkedin.com/in/jimmy-truong-983167297/" target="_blank" class="contact-card linkedin-card">
-                    <div class="card-frame"><img src="linkedin.png" alt="LinkedIn"></div>
-                    <div class="card-info">
-                        <h4>LinkedIn</h4>
-                        <span>Réseau Professionnel</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>© 2026 Jimmy Truong • jims22324@gmail.com / jimmy.truong@mediaschool.me</p>
-    </div>
-</footer>
+        lightbox.init();
 
+        const swiper = new Swiper('.project-swiper', {
+            speed: 1000,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            loop: true,
+            grabCursor: true,
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            pagination: { el: '.swiper-pagination', clickable: true },
+        });
+    </script>
 </body>
 </html>

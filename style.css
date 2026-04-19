@@ -2146,3 +2146,337 @@ footer { padding: 120px 6% 50px; background: var(--black); color: var(--white); 
         height: 400px; /* Hauteur fixe pour que ce soit beau au scroll */
     }
 }
+
+/* --- SECTION YOUTUBE --- */
+.youtube-section {
+    padding: 100px 20px;
+    background-color: #fafafa; /* Très léger gris pour détacher la section */
+}
+
+.yt-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.yt-desc {
+    max-width: 600px;
+    margin: 20px auto;
+    font-weight: 300;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* GRILLE VIDÉO */
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 vidéos côte à côte sur PC */
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-info {
+    margin-top: 15px;
+}
+
+.video-info h4 {
+    font-family: 'Tenor Sans', serif;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.video-info span {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* BOUTON CHAÎNE YOUTUBE */
+.yt-cta {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.btn-yt {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-yt:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr; /* 1 seule vidéo par ligne sur mobile */
+    }
+}
+
+/* --- OPTIMISATION MAGAZINE --- */
+.magazine-viewer {
+    padding: 60px 0;
+    overflow: hidden;
+    background: #fafafa;
+}
+
+.magazine-slider {
+    width: 100%;
+    overflow: visible !important; /* Permet de voir les pages suivantes arriver */
+}
+
+.swiper-slide {
+    width: 450px; /* Largeur de la page A4 sur desktop */
+    max-width: 85vw; /* Largeur sur mobile */
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+}
+
+/* Effet de profondeur : les pages sur les côtés sont plus petites et floues */
+.swiper-slide:not(.swiper-slide-active) {
+    opacity: 0.4;
+    transform: scale(0.85);
+}
+
+.swiper-slide a {
+    display: block;
+    aspect-ratio: 1 / 1.414; /* Ratio A4 */
+    background: #fff;
+    cursor: zoom-in;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Boutons de navigation personnalisés */
+.swiper-button-next, .swiper-button-prev {
+    color: #000 !important;
+    top: 50%;
+    transform: translateY(-50%) scale(0.7);
+}
+
+.swiper-pagination-fraction {
+    font-family: 'Tenor Sans', serif;
+    bottom: 10px !important;
+    letter-spacing: 2px;
+}
+
+/* On cible le header de ton magazine */
+.mag-intro {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments les uns sous les autres */
+    justify-content: center; /* Centre verticalement */
+    align-items: center;    /* Centre horizontalement */
+    text-align: center;     /* Centre le texte à l'intérieur des balises */
+    
+    min-height: 60vh;       /* Donne de la hauteur pour que le centrage soit visible */
+    padding: 100px 20px;
+}
+
+/* Espacement entre les lignes pour plus de clarté */
+.mag-intro .subtitle {
+    margin-bottom: 15px;
+}
+
+.mag-intro h1 {
+    margin: 10px 0 20px 0;
+    font-size: 2.5rem; /* Ajuste selon tes préférences */
+}
+
+.mag-meta {
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.mag-description {
+    max-width: 700px; /* On évite les lignes trop longues */
+    margin: 80px auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.desc-content h3 {
+    font-family: 'Tenor Sans', serif;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.desc-content p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 1.1rem;
+    line-height: 1.8; /* Grand espace entre les lignes */
+    color: #333;
+}
+
+/* On stylise les mots importants */
+.desc-content p strong {
+    font-weight: 400;
+    color: #000;
+}
+
+/* Désactiver l'effet de survol (overlay/scale) sur les compétences */
+.software-item.software-card {
+    cursor: default; /* Change le curseur en flèche normale au lieu de la main */
+    transform: none !important; /* Empêche le zoom s'il y en a un */
+    box-shadow: none !important; /* Retire l'ombre au survol si elle existe */
+}
+
+/* Si tu as un élément de type "overlay" (fond qui s'assombrit) à l'intérieur */
+.software-item.software-card:hover {
+    background: transparent !important; /* Ou la couleur de fond d'origine */
+    opacity: 1 !important;
+}
+
+/* Si un pseudo-élément (:after ou :before) crée l'overlay */
+.software-item.software-card:hover::after,
+.software-item.software-card:hover::before {
+    display: none !important;
+}
+
+/* On s'assure que l'image et le texte ne bougent pas */
+.software-item.software-card:hover img,
+.software-item.software-card:hover span {
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+/* Désactive le passage en noir et blanc pour les icônes de compétences */
+.software-grid .software-item img {
+    filter: none !important; /* Annule tout filtre noir et blanc */
+    transition: none !important; /* Retire l'animation de changement de couleur */
+}
+
+/* On s'assure que même au survol (hover), l'image reste intacte */
+.software-grid .software-item:hover img {
+    filter: none !important;
+    opacity: 1 !important; /* Évite aussi que l'image devienne transparente */
+    transform: none !important; /* Optionnel : empêche l'icône de bouger */
+}
+
+/* Pour renforcer l'idée que ce n'est pas cliquable */
+.software-item.software-card {
+    cursor: default !important;
+}
+
+.project-slideshow {
+    padding: 100px 0;
+    overflow: hidden; /* Important pour ne pas avoir de barre de scroll horizontale */
+}
+
+.project-swiper .swiper-slide {
+    width: 800px; /* Largeur d'une slide sur PC */
+    max-width: 85vw; /* Largeur sur mobile */
+    opacity: 0.4;
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: scale(0.9);
+}
+
+.project-swiper .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.project-swiper img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* On réduit la taille des flèches pour le côté minimaliste */
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 20px !important;
+    color: #000;
+}
+
+/* Style du bouton Retour / Fermer */
+.close-project {
+    position: fixed; /* Il reste bloqué en haut à droite même au scroll */
+    top: 30px;
+    right: 30px;
+    z-index: 9999; /* Toujours au-dessus de tout (slider, images, etc.) */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #000;
+    background: rgba(255, 255, 255, 0.9); /* Fond blanc léger pour lisibilité */
+    padding: 10px 20px;
+    border-radius: 40px;
+    backdrop-filter: blur(5px); /* Effet de flou derrière le bouton */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.close-project:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    background: #fff;
+}
+
+.close-icon {
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+/* Cache le texte sur mobile pour plus de discrétion si besoin */
+@media (max-width: 768px) {
+    .close-project {
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+    }
+    .close-text {
+        display: none; /* Ne garde que la croix sur petit écran */
+    }
+}
+
+/* Garde les proportions de l'image intactes dans la lightbox */
+.pswp__img {
+    object-fit: contain !important;
+}
+
+/* Optionnel : change le curseur en loupe sur le slider */
+.project-slideshow a {
+    cursor: zoom-in;
+}
